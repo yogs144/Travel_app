@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 
 import ImageHero from 'assets/images/img-hero.jpg'
 import ImageHero_ from 'assets/images/img-hero-frame.jpg'
@@ -20,6 +21,7 @@ export default function Hero(props) {
     }
 
     return (
+        <Fade bottom>
         <section className="container pt-4">
             <div className="row align-items-center">
                 <div className="col-auto pr-3" style={{width: 530 }}>
@@ -57,15 +59,16 @@ return but not for your time.
                         </div>
                     </div>
                 </div>
-
-                <div className="col-6 pl-5">
-                    <div style={{width: 540, height: 410}}>
-                        <img src={ImageHero} alt="Santorini Stay" className="img-fluid position-absolute" style={{margin: "-30px 0 0 -30px", zIndex: 1}}/>
-                        <img src={ImageHero_} alt="Santorini Stay Frame" className="img-fluid position-absolute" style={{margin: "0 -15px -15px 0"}}/>
+                <Fade bottom delay={400}>
+                    <div className="col-6 pl-5">
+                        <div style={{width: 540, height: 410}}>
+                            <img src={ImageHero} alt="Santorini Stay" className="img-fluid position-absolute" style={{margin: "-30px 0 0 -30px", zIndex: 1}}/>
+                            <img src={ImageHero_} alt="Santorini Stay Frame" className="img-fluid position-absolute" style={{margin: "0 -15px -15px 0"}}/>
+                        </div>
                     </div>
-                </div>
-
+                </Fade>
             </div>
         </section>
+        </Fade>
     )
 }
